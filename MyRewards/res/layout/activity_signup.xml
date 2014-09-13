@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/image_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/ic_launcher" />
+
+    <EditText
+        android:id="@+id/editText_firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Firstname"
+        android:inputType="textPersonName" >
+        
+        </EditText>
+
+    <EditText
+        android:id="@+id/editText_email_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText_firstname"
+        android:layout_below="@+id/editText_firstname"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Email ID"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editText_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText_password_signup"
+        android:layout_below="@+id/editText_password_signup"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:maxLength="10"
+        android:hint="Phone"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/button_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText_phone"
+        android:layout_alignRight="@+id/editText_phone"
+        android:layout_below="@+id/editText_phone"
+        android:layout_marginTop="29dp"
+        android:text="Sign Up" />
+
+    <EditText
+        android:id="@+id/editText_password_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText_email_signup"
+        android:layout_alignRight="@+id/editText_email_signup"
+        android:layout_below="@+id/editText_email_signup"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" >
+        
+    </EditText>
+
+</RelativeLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <LinearLayout
+        android:id="@+id/parentRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.90"
+        android:orientation="vertical" >
+
+        <!-- layout for near by merchant -->
+
+        <RelativeLayout
+            android:id="@+id/relativeNearByMerchant"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ListView
+                android:id="@+id/listViewNearByMerchant"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:listSelector="@null" >
+            </ListView>
+        </RelativeLayout>
+
+        <!-- layout for near by shop -->
+
+        <RelativeLayout
+            android:id="@+id/relativeNearByShop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+
+            <ListView
+                android:id="@+id/listViewNearByShop"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:listSelector="@null" >
+            </ListView>
+        </RelativeLayout>
+
+        <!-- layout for my rewards -->
+
+        <RelativeLayout
+            android:id="@+id/relativeMyRewards"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+
+            <ListView
+                android:id="@+id/listViewMyRewards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:listSelector="@null" >
+            </ListView>
+        </RelativeLayout>
+
+        <!-- layout for update user profile -->
+
+        <RelativeLayout
+            android:id="@+id/relativeUpdateUserProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/image_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22dp"
+                android:src="@drawable/ic_launcher" />
+
+            <EditText
+                android:id="@+id/editText_update_firstname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_profile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="Firstname"
+                android:inputType="textPersonName" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/editText_update_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText_update_firstname"
+                android:layout_below="@+id/editText_update_firstname"
+                android:ems="10"
+                android:hint="Email ID"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/editText_update_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText_update_email"
+                android:layout_below="@+id/editText_update_email"
+                android:ems="10"
+                android:hint="Phone"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/editText_update_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText_update_phone"
+                android:layout_below="@+id/editText_update_phone"
+                android:ems="10"
+                android:hint="Gender" />
+
+            <EditText
+                android:id="@+id/editText_update_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText_update_gender"
+                android:layout_below="@+id/editText_update_gender"
+                android:ems="10"
+                android:hint="Address"
+                android:inputType="textPostalAddress" />
+
+            <Button
+                android:id="@+id/button_update_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editText_update_address"
+                android:layout_alignRight="@+id/editText_update_address"
+                android:layout_below="@+id/editText_update_address"
+                android:layout_marginTop="30dp"
+                android:onClick="updateButtonTapped"
+                android:text="Update" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_weight="0.10"
+        android:background="#000000"
+        android:weightSum="4" >
+
+        <Button
+            android:id="@+id/buttonUpdatedNearByMerchant"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/appointment_button" />
+
+        <Button
+            android:id="@+id/buttonUpdatedShop"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/queue_button" />
+
+        <Button
+            android:id="@+id/buttonUpdatedMyRewards"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_button" />
+
+        <Button
+            android:id="@+id/buttonUpdatedUserProfile"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/profile_button" />
+    </LinearLayout>
+
+</LinearLayout>

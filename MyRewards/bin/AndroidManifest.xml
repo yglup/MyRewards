@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.augurs.myrewards"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <!-- PERMISSIONS -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.augurs.myrewards.activity.SplashScreenActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.augurs.myrewards.activity.LoginActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        
+        
+        <activity
+            android:name="com.augurs.myrewards.activity.SignUpActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        
+        <activity android:name="com.augurs.myrewards.activity.HomeActivity" 
+                  android:screenOrientation="portrait">
+        </activity>
+        
+        <activity android:name="com.augurs.myrewards.activity.MainActivity" 
+                  android:screenOrientation="portrait">
+        </activity>
+        
+        <activity android:name="com.augurs.myrewards.activity.MerchantDetailsActivity" 
+                  android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="com.augurs.myrewards.activity.ActivityParentMerchant" 
+            	  android:screenOrientation="portrait">
+        </activity>
+        
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity android:name="com.facebook.LoginActivity" >
+        </activity>
+    </application>
+
+</manifest>

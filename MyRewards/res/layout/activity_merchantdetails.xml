@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutMerchantColor"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="54dp">
+
+            <com.augurs.myrewards.classes.RoundedImageView
+                android:id="@+id/imageViewMerchantDetailLogoImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="75dp"
+                android:src="@drawable/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/layout_bg"
+                android:layout_marginTop="28dp" >
+
+                
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/badge" />
+
+                <TextView
+                    android:id="@+id/textViewSilver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Silver"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewStatusValidation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="Status Validation" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonMerchantShare"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/relativeLayoutMerchantColor"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/reply" />
+
+        <TextView
+            android:id="@+id/textViewMerchantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayoutMerchantColor"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/textViewMerchantDistance"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textViewMerchantDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textViewMerchantName"
+            android:layout_alignBottom="@+id/textViewMerchantName"
+            android:layout_alignLeft="@+id/relativeLayoutMerchantColor"
+            android:text="Name : " />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewMerchantDistance"
+            android:layout_toLeftOf="@+id/textViewMerchantName"
+            android:text="Phone :" />
+
+        <TextView
+            android:id="@+id/textViewMerchantPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignLeft="@+id/textViewMerchantName"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="28dp"
+            android:text="Rating : " />
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignRight="@+id/textViewMerchantPhone"
+            android:layout_below="@+id/textViewMerchantPhone"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:src="@drawable/rating" />
+
+        <Button
+            android:id="@+id/buttonSubmitRating"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewMerchantPhone"
+            android:layout_below="@+id/imageButton1"
+            android:layout_marginTop="23dp"
+            android:text="Submit" />
+
+    </RelativeLayout>
+
+</LinearLayout>
