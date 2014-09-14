@@ -104,7 +104,7 @@ public class SignUpActivity extends Activity
 		editTextPhone = (EditText) findViewById(R.id.editText_phone);
 
 		connectivityManager = (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
-		networkInfo = connectivityManager.getActiveNetworkInfo();//connection.isNetAvailable(SignUpActivity.this);
+		networkInfo = connectivityManager.getActiveNetworkInfo();
 
 		isOnline = networkInfo.isConnected();
 		buttonSignUp.setOnClickListener(new OnClickListener() 

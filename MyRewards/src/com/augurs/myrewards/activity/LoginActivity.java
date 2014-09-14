@@ -7,17 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 import com.augurs.myrewards.R;
-import com.augurs.myrewards.database.MyRewardsSqliteHelper;
-import com.augurs.myrewards.database.MyRewardsUserId;
 import com.augurs.myrewards.dataclasses.AuthenticateUserData;
 import com.augurs.myrewards.dataclasses.NearByMerchantData;
 import com.augurs.myrewards.dataclasses.ResetPasswordData;
 import com.augurs.myrewards.manager.AuthenticationManager;
-import com.augurs.myrewards.manager.MerchantManager;
 import com.augurs.myrewards.manager.PasswordManager;
 import com.augurs.myrewards.utilities.GlobalVariables;
 import com.facebook.Request;
@@ -31,13 +27,11 @@ import com.facebook.android.FacebookError;
 import com.facebook.android.AsyncFacebookRunner.RequestListener;
 import com.facebook.android.Facebook.DialogListener;
 import com.facebook.model.GraphUser;
-
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.preference.PreferenceManager;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -49,17 +43,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.res.Resources;
-import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+@SuppressWarnings("deprecation")
 public class LoginActivity extends Activity 
 {
 
@@ -371,10 +363,6 @@ public class LoginActivity extends Activity
 		Session.getActiveSession().onActivityResult(this, requestCode, resultCode, data);
 	}*/
 
-	/**
-	 * Function to login into facebook
-	 * */
-	@SuppressWarnings("deprecation")
 	public void loginTofacebook() 
 	{
 		Log.d("login to facebook--------> " , " : " + " facebook");
@@ -451,7 +439,6 @@ public class LoginActivity extends Activity
 	/**
 	 * Get Profile information by making request to Facebook Graph API
 	 * */
-	@SuppressWarnings("deprecation")
 	public void getProfileInformation() 
 	{
 		emailId = editTextEmail.getText().toString();
@@ -492,7 +479,6 @@ public class LoginActivity extends Activity
 			super.onPreExecute();
 		}
 
-		@SuppressWarnings("deprecation")
 		@Override
 		protected String doInBackground(final String... params) 
 		{
